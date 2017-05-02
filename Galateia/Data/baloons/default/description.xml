@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BaloonConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DisplayName>デフォルト</DisplayName>
+  <Description>デフォルトのバルーンです．</Description>
+  <Craftsman>しゅーぽん</Craftsman>
+  <Contact>https://galateia.codeplex.com/</Contact>
+  <Guid>44a7775a-ceed-4ce5-9b9d-456487086133</Guid>
+  <LeftBaloon>
+    <HeaderImage>header.png</HeaderImage>
+    <FooterImage>footer.png</FooterImage>
+    <LeftSideImage>leftside.png</LeftSideImage>
+    <RightSideImage>rightside.png</RightSideImage>
+    <BodyBrushImage>body.png</BodyBrushImage>
+    <ViewerMargin>
+      <Left>10</Left>
+      <Top>5</Top>
+      <Right>10</Right>
+      <Bottom>5</Bottom>
+    </ViewerMargin>
+    <HorizontalWorldOffset>4</HorizontalWorldOffset>
+    <VerticalScreenOffset>1</VerticalScreenOffset>
+    <FontFamily>Meiryo UI</FontFamily>
+    <FontSize>18</FontSize>
+  </LeftBaloon>
+  <RightBaloon>
+    <HeaderImage>header.png</HeaderImage>
+    <FooterImage>footer.png</FooterImage>
+    <LeftSideImage>leftside.png</LeftSideImage>
+    <RightSideImage>rightside.png</RightSideImage>
+    <BodyBrushImage>body.png</BodyBrushImage>
+    <ViewerMargin>
+      <Left>10</Left>
+      <Top>5</Top>
+      <Right>10</Right>
+      <Bottom>5</Bottom>
+    </ViewerMargin>
+    <HorizontalWorldOffset>4</HorizontalWorldOffset>
+    <VerticalScreenOffset>1</VerticalScreenOffset>
+    <FontFamily>Meiryo UI</FontFamily>
+    <FontSize>18</FontSize>
+  </RightBaloon>
+</BaloonConfig>

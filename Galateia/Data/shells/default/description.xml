@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ShellConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DisplayName>デフォルト</DisplayName>
+  <Description>このファイルと同じディレクトリにmodel.pmxを配置．</Description>
+  <Craftsman>しゅーぽん</Craftsman>
+  <Contact>https://galateia.codeplex.com/</Contact>
+  <Guid>3D0A5BCB-E77D-4447-91EA-237A933F8117</Guid>
+  <Model>model.pmx</Model>
+</ShellConfig>

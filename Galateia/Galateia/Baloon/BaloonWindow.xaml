@@ -1,0 +1,79 @@
+﻿<Window x:Class="Galateia.Baloon.BaloonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Name="window"
+        Title="BaloonWindow" Background="Transparent" SizeToContent="Height" ShowActivated="False"
+        WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True"
+        SnapsToDevicePixels="True"
+        Loaded="Window_Loaded" Closed="Window_Closed" MouseMove="window_MouseMove">
+    <Window.Resources>
+        <Storyboard x:Key="fadeout">
+            <DoubleAnimation Storyboard.TargetName="window" Storyboard.TargetProperty="Opacity"
+                             Duration="00:00:00.500" From="1.0" To="0.0">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseIn" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+        <Storyboard x:Key="fadein">
+            <DoubleAnimation Storyboard.TargetName="window" Storyboard.TargetProperty="Opacity"
+                             Duration="00:00:00.500" From="0.0" To="1.0">
+                <DoubleAnimation.EasingFunction>
+                    <CubicEase EasingMode="EaseOut" />
+                </DoubleAnimation.EasingFunction>
+            </DoubleAnimation>
+        </Storyboard>
+    </Window.Resources>
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Row="0" Grid.ColumnSpan="3" Margin="0"
+                   Source="{Binding HeaderImage, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}" />
+            <Rectangle Grid.Row="1" Grid.Column="0" Margin="0" StrokeThickness="0"
+                       Width="{Binding LeftSideImage.Width, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}">
+                <Rectangle.Fill>
+                    <ImageBrush
+                        ImageSource="{Binding LeftSideImage, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Grid.Row="1" Grid.Column="1" Margin="0" StrokeThickness="0">
+                <Rectangle.Fill>
+                    <ImageBrush
+                        ImageSource="{Binding BodyBrushImage, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Grid.Row="1" Grid.Column="2" Margin="0" StrokeThickness="0"
+                       Width="{Binding RightSideImage.Width, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}">
+                <Rectangle.Fill>
+                    <ImageBrush
+                        ImageSource="{Binding RightSideImage, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Image Grid.Row="2" Grid.ColumnSpan="3" Margin="0"
+                   Source="{Binding FooterImage, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}" />
+        </Grid>
+        <FlowDocumentScrollViewer VerticalScrollBarVisibility="Auto"
+                                  Margin="{Binding ViewerMargin, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}">
+            <FlowDocument x:Name="document"
+                          Cursor="{Binding Cursor, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
+                          FontFamily="{Binding FontFamily, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
+                          FontSize="{Binding FontSize, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
+                          FontStretch="{Binding FontStretch, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
+                          FontStyle="{Binding FontStyle, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
+                          FontWeight="{Binding FontWeight, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
+                          Foreground="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
+                          IsHyphenationEnabled="{Binding IsHyphenationEnabled, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
+                          LineHeight="{Binding LineHeight, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}"
+                          LineStackingStrategy="{Binding LineStackingStrategy, RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window}}" />
+        </FlowDocumentScrollViewer>
+    </Grid>
+</Window>

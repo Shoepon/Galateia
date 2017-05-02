@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39FF78F9-631A-4311-BD77-54BE837D6787}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aphrodite</RootNamespace>
+    <AssemblyName>Aphrodite</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MikuMikuFlex">
+      <HintPath>..\..\mmflex\MikuMikuFlex.dll</HintPath>
+    </Reference>
+    <Reference Include="SlimDX, Version=4.0.13.43, Culture=neutral, PublicKeyToken=b1b0c32fd1ffe4f9, processorArchitecture=x86">
+      <Private>True</Private>
+      <HintPath>..\packages\SlimDX.4.0.13.44\lib\NET40\SlimDX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activities" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Idle.cs" />
+    <Compile Include="Intelligence.cs" />
+    <Compile Include="MeCab\Core\BitUtils.cs" />
+    <Compile Include="MeCab\Core\CharInfo.cs" />
+    <Compile Include="MeCab\Core\CharProperty.cs" />
+    <Compile Include="MeCab\Core\Connector.cs" />
+    <Compile Include="MeCab\Core\DoubleArray.cs" />
+    <Compile Include="MeCab\Core\IniParser.cs" />
+    <Compile Include="MeCab\Core\MeCabDictionary.cs" />
+    <Compile Include="MeCab\Core\MeCabPath.cs" />
+    <Compile Include="MeCab\Core\NBestGenerator.cs" />
+    <Compile Include="MeCab\Core\PriorityQueue.cs" />
+    <Compile Include="MeCab\Core\StrUtils.cs" />
+    <Compile Include="MeCab\Core\Token.cs" />
+    <Compile Include="MeCab\Core\Tokenizer.cs" />
+    <Compile Include="MeCab\Core\Utils.cs" />
+    <Compile Include="MeCab\Core\Viterbi.cs" />
+    <Compile Include="MeCab\Core\Writer.cs" />
+    <Compile Include="MeCab\IMorpheme.cs" />
+    <Compile Include="MeCab\MeCabDictionaryType.cs" />
+    <Compile Include="MeCab\MeCabException.cs" />
+    <Compile Include="MeCab\MeCabFileFormatException.cs" />
+    <Compile Include="MeCab\MeCabInvalidFileException.cs" />
+    <Compile Include="MeCab\MeCabLatticeLevel.cs" />
+    <Compile Include="MeCab\MeCabNode.cs" />
+    <Compile Include="MeCab\MeCabNodeStat.cs" />
+    <Compile Include="MeCab\MeCabParam.cs" />
+    <Compile Include="MeCab\MeCabTagger.cs" />
+    <Compile Include="MeCab\Morpheme.cs" />
+    <Compile Include="MeCab\MorphologicalAnalyzer.cs" />
+    <Compile Include="Parlance.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReversePolishNotation\BinaryOperator.cs" />
+    <Compile Include="ReversePolishNotation\Calculator.cs" />
+    <Compile Include="ReversePolishNotation\Comma.cs" />
+    <Compile Include="ReversePolishNotation\Constant.cs" />
+    <Compile Include="ReversePolishNotation\Function.cs" />
+    <Compile Include="ReversePolishNotation\IOperator.cs" />
+    <Compile Include="ReversePolishNotation\IToken.cs" />
+    <Compile Include="ReversePolishNotation\Notation.cs" />
+    <Compile Include="ReversePolishNotation\Parenthesis.cs" />
+    <Compile Include="ReversePolishNotation\TokenTypes.cs" />
+    <Compile Include="ReversePolishNotation\UnaryOperator.cs" />
+    <Compile Include="ReversePolishNotation\Variable.cs" />
+    <Compile Include="ShellConfig.cs" />
+    <Compile Include="WindowsAPI\Kernel.cs" />
+    <Compile Include="WindowsAPI\LastInputInfo.cs" />
+    <Compile Include="WindowsAPI\User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Galateia.CSC\Galateia.CSC.csproj">
+      <Project>{05dfded3-9eb6-40b7-91ef-f990578d857e}</Project>
+      <Name>Galateia.CSC</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

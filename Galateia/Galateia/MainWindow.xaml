@@ -1,0 +1,19 @@
+﻿<Window x:Class="Galateia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Galateia" ShowInTaskbar="False" WindowStyle="None" ResizeMode="NoResize" ShowActivated="True"
+        Width="150" SizeToContent="Height"
+        Loaded="Window_Loaded" Closed="Window_Closed" Deactivated="Window_Deactivated">
+    <Window.Resources>
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Padding" Value="10,3,3,3" />
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Background" Value="Transparent" />
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <Button Content="環境設定" Click="GlobalConfigButton_Click" Style="{StaticResource MenuButtonStyle}" />
+        <Button Content="終了" Click="ExitButton_Click" Style="{StaticResource MenuButtonStyle}" />
+    </StackPanel>
+</Window>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="Galateia.UserInput.UserInputWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UserInputWindow" Background="Transparent" SizeToContent="WidthAndHeight"
+        WindowStyle="None" AllowsTransparency="True" ResizeMode="NoResize" ShowInTaskbar="False" Topmost="True"
+        Loaded="Window_Loaded" Closed="Window_Closed"
+        Activated="Window_Activated" Deactivated="Window_Deactivated">
+    <Grid>
+        <Rectangle Margin="8" Fill="White" Stroke="Black" />
+        <TextBox x:Name="textBox" Height="22" Margin="16" Width="600" PreviewKeyDown="textBox_PreviewKeyDown"
+                 FontFamily="MS Gothic" FontSize="18" />
+        <TextBlock Text="USER INPUT" FontSize="10" FontFamily="MS Gothic" Padding="3,1,3,2"
+                   Background="Black" Foreground="White"
+                   Margin="16,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextAlignment="Center" />
+    </Grid>
+</Window>
